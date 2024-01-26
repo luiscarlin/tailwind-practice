@@ -1,3 +1,9 @@
+import Sidebar from "./sidebar";
+
 export default function Discord() {
-  return <>discord</>;
+  return (
+    <div className="flex">
+      <Sidebar />
+    </div>
+  );
 }

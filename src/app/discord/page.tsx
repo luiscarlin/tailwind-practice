@@ -7,28 +7,28 @@ export default function Discord() {
   return (
     <>
       <aside className="fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-gray-900 text-white shadow-lg">
-        <SidebarButtonWithTooltip tooltipText="This is fire!">
+        <SidebarLinkWithTooltip tooltipText="This is fire!">
           <FaFire size="28" />
-        </SidebarButtonWithTooltip>
-        <SidebarButtonWithTooltip tooltipText="Add item">
+        </SidebarLinkWithTooltip>
+        <SidebarLinkWithTooltip tooltipText="Add item">
           <BsPlus size="32" />
-        </SidebarButtonWithTooltip>
-        <SidebarButtonWithTooltip tooltipText="lighting!">
+        </SidebarLinkWithTooltip>
+        <SidebarLinkWithTooltip tooltipText="lighting!">
           <BsFillLightningFill size="20" />
-        </SidebarButtonWithTooltip>
-        <SidebarButtonWithTooltip tooltipText="Guiar zone">
+        </SidebarLinkWithTooltip>
+        <SidebarLinkWithTooltip tooltipText="Guiar zone">
           <FaGuitar size="20" />
-        </SidebarButtonWithTooltip>
-        <SidebarButtonWithTooltip tooltipText="settings">
+        </SidebarLinkWithTooltip>
+        <SidebarLinkWithTooltip tooltipText="settings">
           <BsGearFill size="22" />
-        </SidebarButtonWithTooltip>
+        </SidebarLinkWithTooltip>
       </aside>
       <main className="ml-16"></main>
     </>
   );
 }
 
-const SidebarButtonWithTooltip = ({
+const SidebarLinkWithTooltip = ({
   children,
   tooltipText,
 }: {
@@ -36,7 +36,9 @@ const SidebarButtonWithTooltip = ({
   tooltipText: string;
 }) => {
   return (
-    <div
+    <a
+      href="#"
+      aria-label={tooltipText}
       className="relative flex items-center justify-center h-12 w-12 my-2 mx-auto
                 bg-gray-800 hover:bg-green-600
                 text-green-500 hover:text-white
@@ -53,6 +55,6 @@ const SidebarButtonWithTooltip = ({
       >
         <p>{tooltipText}</p>
       </span>
-    </div>
+    </a>
   );
 };
